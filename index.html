@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Tickermepink : A lightweight news ticker plugin for jQuery.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Tickermepink</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/gluhbirne/tickermepink">View on GitHub</a>
+
+          <h1 id="project_title">Tickermepink</h1>
+          <h2 id="project_tagline">A lightweight news ticker plugin for jQuery.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/gluhbirne/tickermepink/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/gluhbirne/tickermepink/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="tickermepink" class="anchor" href="#tickermepink"><span class="octicon octicon-link"></span></a>TickerMePink</h1>
+
+<p>A lightweight (&lt;4k), customizable news ticker plugin for jQuery. It uses hard-coded SVG control buttons so no extra images are needed. All you need is the plugin.</p>
+
+<h2>
+<a name="version" class="anchor" href="#version"><span class="octicon octicon-link"></span></a>Version</h2>
+
+<p>1.0</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="i-include-jquery-and-the-plugin" class="anchor" href="#i-include-jquery-and-the-plugin"><span class="octicon octicon-link"></span></a>i. Include jQuery and the plugin:</h3>
+
+<pre><code>&lt;script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="assets/js/tickerme.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h3>
+<a name="ii-add-your-news-stories-in-a-list" class="anchor" href="#ii-add-your-news-stories-in-a-list"><span class="octicon octicon-link"></span></a>ii. Add your news stories in a list:</h3>
+
+<p>You can give the wrapper any <code>id</code> - in this case we're using <code>ticker</code>.</p>
+
+<pre><code>&lt;ul id="ticker"&gt;
+    &lt;li&gt;This is the first news story.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, molestiae.&lt;/li&gt;
+    &lt;li&gt;Another news story.&lt;/li&gt;
+    &lt;li&gt;The final news story, with some more test text.&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h3>
+<a name="iii-call-the-plugin-with-your-wrapper-id" class="anchor" href="#iii-call-the-plugin-with-your-wrapper-id"><span class="octicon octicon-link"></span></a>iii. Call the plugin with your wrapper id:</h3>
+
+<pre><code>$(function(){
+    $('#ticker').tickerme();
+});
+</code></pre>
+
+<h3>
+<a name="iv-optional---edit-the-tickermepinks-style" class="anchor" href="#iv-optional---edit-the-tickermepinks-style"><span class="octicon octicon-link"></span></a>iv: Optional - edit the TickerMePink's style:</h3>
+
+<p>You can edit the way TickerMePink wraps the ticker: either create a definition in your CSS file for <code>#ticker_container</code>, or edit the one provided in the example <code>styles.css</code>:</p>
+
+<pre><code>#ticker_container {
+    padding:10px;
+    border:1px solid #676767;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    overflow: auto;
+}
+</code></pre>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<h3>
+<a name="fade_speed" class="anchor" href="#fade_speed"><span class="octicon octicon-link"></span></a>fade_speed</h3>
+
+<p>The speed each story will fade in and out (milliseconds).
+Default: <code>500</code></p>
+
+<h3>
+<a name="duration" class="anchor" href="#duration"><span class="octicon octicon-link"></span></a>duration</h3>
+
+<p>The length of time a story is on the screen (milliseconds).
+Default: <code>3000</code></p>
+
+<h3>
+<a name="auto_stop" class="anchor" href="#auto_stop"><span class="octicon octicon-link"></span></a>auto_stop</h3>
+
+<p>If <code>true</code>, the ticker will automatically stop when the previous or next button is clicked.
+Default: <code>true</code></p>
+
+<h3>
+<a name="control_colour" class="anchor" href="#control_colour"><span class="octicon octicon-link"></span></a>control_colour</h3>
+
+<p>The colour of the play, pause, previous and next controls.
+Default: <code>#333333</code></p>
+
+<h3>
+<a name="control_rollover" class="anchor" href="#control_rollover"><span class="octicon octicon-link"></span></a>control_rollover</h3>
+
+<p>The colour of the control buttons on rollover.
+Default: <code>#666666</code></p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example:</h2>
+
+<pre><code>$(function(){
+    $('#news_stories').tickerme({
+        fade_speed: 900,
+        auto_stop: false,
+        control_rollover: '#FF0000'
+    });
+});
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Tickermepink maintained by <a href="https://github.com/gluhbirne">gluhbirne</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
