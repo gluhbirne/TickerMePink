@@ -1,0 +1,33 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Bree Serif', serif;
+	font-size: 14px;
+	background: #F6489F;
+}
+
+#wrapper {
+	margin: 40px auto;
+	width: 50%;
+}
+
+h1 {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#ticker_container {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background: #FFFFFF;
+	padding: 10px;
+	border: 1px solid #343434;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	overflow: auto;
+}
