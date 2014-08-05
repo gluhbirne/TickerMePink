@@ -71,7 +71,7 @@ Default: `true`
 ### control_colour
 
 The colour of the play, pause, previous and next controls.
-Default: `#333333'
+Default: `#333333`
 
 ### control_rollover 
 
